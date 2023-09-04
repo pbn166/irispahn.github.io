@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Album ảnh</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .gallery img {
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showImages() {
+            var galleryImages = document.getElementsByClassName("gallery-img");
+
+            for (var i = 1; i < galleryImages.length; i++) {
+                galleryImages[i].classList.remove("hidden");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Album ảnh</h1>
+
+    <div class="gallery">
+        <img src="upload/cg-1.JPG" alt="Ảnh 1" onclick="showImages()" class="gallery-img">
+        <img src="upload/cg-2.JPG" alt="Ảnh 2" class="gallery-img hidden">
+        <img src="upload/cg-3.JPG" alt="Ảnh 3" class="gallery-img hidden">
+        <!-- Thêm các ảnh khác tại đây -->
+    </div>
+</body>
+
+</html>
